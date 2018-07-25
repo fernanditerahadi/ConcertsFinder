@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Music</string>
+
+    <!--Place auto complete-->
+    <string name="place_auto_complete_hint">Search concert by place</string>
+
+    <!--Layout Label-->
+    <string name="title_concert_activity">Concerts</string>
+    <string name="title_description_activity">Description</string>
+    <string name="title_concert_summary">Concerts</string>
+    <string name="title_concert_favorite">Favorite</string>
+    <string name="title_description_venue">Venue</string>
+    <string name="title_description_toptracks">Top Tracks</string>
+
+    <!--Buttons Label-->
+    <string name="button_view_location">View Location</string>
+    <string name="button_get_ticket">Get Ticket</string>
+
+    <!--Toast Message-->
+    <string name="toast_failed_retrieve">No concert found within 50 miles radius or network request has reached its daily limit.</string>
+    <string name="toast_failed_zip_code">No zip code found on the selected location.</string>
+    <string name="toast_retrieve_concert">Retrieving concerts around the specified location...</string>
+    <string name="toast_concert_bookmark">The concert has been added to favorite</string>
+    <string name="toast_concert_remove">The concert has been removed from the favorite</string>
+
+    <!--Menu title-->
+    <string name="title_concert_menu_search">Search</string>
+    <string name="title_desc_menu_bookmark">Bookmark</string>
+    <string name="title_desc_menu_delete">Delete</string>
+
+    <!--Confirmation Dialog-->
+    <string name="delete_dialog">Remove this concert from favorite?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+
+    <!--Empty View Text-->
+    <string name="empty_view_title_text">Move Along</string>
+    <string name="empty_view_subtitle_text">There is nothing to see here</string>
+</resources>
