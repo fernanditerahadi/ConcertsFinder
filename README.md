@@ -1,6 +1,7 @@
 # ConcertsFinder 
-Location-based concerts mobile app 
+This is a location-based concerts mobile app I made from scratch 
 # Features
+With this app you can: 
 * Search upcoming concerts around the specified location
 * Save favorite concerts locally to view them even when offline
 * Discover popular tracks by the artist
