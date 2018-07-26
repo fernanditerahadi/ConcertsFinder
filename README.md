@@ -12,7 +12,7 @@ With this app you can:
 ![land_1](http://res.cloudinary.com/jlaja/image/upload/c_scale,w_420/v1532577713/landscape_1.png) ![land_4](http://res.cloudinary.com/jlaja/image/upload/c_scale,w_420/v1532577713/landscape_4.png) ![land_2](http://res.cloudinary.com/jlaja/image/upload/c_scale,w_420/v1532577713/landscape_2.png) ![land_3](http://res.cloudinary.com/jlaja/image/upload/c_scale,w_420/v1532577713/landscape_3.png)
 ### APIs
 Just in case you are wondering where do I get those concerts, artists, tracks, places, and zipcodes informations for the app.
-I get those from the following API providers listed below, big thanks to the them for making this app posible
+I get those from the following API providers listed below, big thanks to them for making this app posible
 * [JamBase](http://developer.jambase.com/)
 * [Last.fm](https://www.last.fm/api)
 * [LocationIQ](https://locationiq.com/)
