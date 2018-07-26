@@ -25,7 +25,7 @@ List of great external libraries that do the heavy-lifting crucial operations in
 * [Room](https://developer.android.com/topic/libraries/architecture/room)
 
 ### Icons
-This is where those great icons coming from
+This is where those great professional looking icons coming from
 * [Flaticon](https://www.flaticon.com/search?word=concert)
 * [Material.io](https://material.io/tools/icons/)
 
