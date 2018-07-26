@@ -1,5 +1,5 @@
 # ConcertsFinder 
-This is a location-based concerts mobile app I made from scratch 
+This is a location-based concerts finder mobile app I made from scratch 
 ### Features
 With this app you can: 
 * Search upcoming concerts around the specified location
