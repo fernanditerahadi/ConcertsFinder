@@ -73,7 +73,8 @@ public class ConcertActivity extends AppCompatActivity
         // Instantiate the Place Autocomplete
         autocompleteFragment = (PlaceAutocompleteFragment)
                 getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-        setupPlaceAutocomplete(autocompleteFragment);
+        autocompleteFragment.setOnPlaceSelectedListener(this);
+        MapPresenter.setupPlaceAutocomplete(autocompleteFragment, getApplicationContext());
 
 
         // Instantiate the View Pager
@@ -89,14 +90,10 @@ public class ConcertActivity extends AppCompatActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        setMapStyleLayout(mMap);
         mMap.setOnMapClickListener(this);
         mMap.setLatLngBoundsForCameraTarget(MapPresenter.UNITED_STATES);
-        Marker marker = mMap.addMarker(new MarkerOptions().position(MapPresenter.DEFAULT_LATLNG));
-        marker.setTitle(MapPresenter.DEFAULT_SUBURB_NAME);
-        marker.showInfoWindow();
-        mMap.moveCamera(CameraUpdateFactory
-                .newLatLngZoom(MapPresenter.DEFAULT_LATLNG, 5));
+        MapPresenter.setMapStyleLayout(mMap, getApplicationContext());
+        MapPresenter.setMarkerAndCamera(mMap, MapPresenter.DEFAULT_LATLNG, MapPresenter.DEFAULT_SUBURB_NAME);
 
     }
 
@@ -157,7 +154,6 @@ public class ConcertActivity extends AppCompatActivity
         Log.i(LOG_TAG, "An error occurred: " + status);
     }
 
-
     public String getRequestZipCode() {
         return mRequestZipCode;
     }
@@ -170,45 +166,5 @@ public class ConcertActivity extends AppCompatActivity
         this.refreshListener = refreshListener;
     }
 
-    private void setMapStyleLayout(GoogleMap googleMap) {
-        try {
-            boolean success = googleMap.setMapStyle(
-                    MapStyleOptions.loadRawResourceStyle(
-                            this, R.raw.map_style));
-
-            if (!success) {
-                Log.e(LOG_TAG, "Style parsing failed.");
-            }
-        } catch (Resources.NotFoundException e) {
-            Log.e(LOG_TAG, "Can't find style. Error: ", e);
-        }
-    }
-
-    private void setupPlaceAutocomplete(PlaceAutocompleteFragment autocompleteFragment) {
-        autocompleteFragment.setOnPlaceSelectedListener(this);
-        autocompleteFragment.setBoundsBias(UNITED_STATES);
-        autocompleteFragment.setHint(getString(R.string.place_auto_complete_hint));
-        autocompleteFragment.getView();
-        autocompleteFragment.setFilter(new AutocompleteFilter
-                .Builder()
-                .setCountry("US")
-                .build());
-        EditText autocompleteText = (EditText) autocompleteFragment
-                .getView()
-                .findViewById(R.id.place_autocomplete_search_input);
-        autocompleteText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-        autocompleteText.setTextColor(getResources().getColor(R.color.white));
-        autocompleteText.setHintTextColor(getResources().getColor(R.color.lightGray));
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            autocompleteText.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.blueGrayLight)));
-        }
-        ImageView searchIcon = autocompleteFragment.getView().findViewById(R.id.place_autocomplete_search_button);
-        searchIcon.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN);
-        int paddingLeft = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8, getResources().getDisplayMetrics());
-        int paddingTop = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, getResources().getDisplayMetrics());
-        int paddingRight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, getResources().getDisplayMetrics());
-        int paddingBottom = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, getResources().getDisplayMetrics());
-        searchIcon.setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
-    }
 
 }

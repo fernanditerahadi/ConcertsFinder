@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_concert_logo_round"
         android:supportsRtl="true">
         <activity
-            android:name=".activities.ConcertActivity"
+            android:name=".views.activities.ConcertActivity"
             android:label="@string/title_concert_activity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -41,13 +41,13 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.DescriptionActivity"
-            android:parentActivityName=".activities.ConcertActivity"
+            android:name=".views.activities.DescriptionActivity"
+            android:parentActivityName=".views.activities.ConcertActivity"
             android:label="@string/title_description_activity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.ConcertActivity" />
+                android:value=".views.activities.ConcertActivity" />
 
         </activity>
     </application>
