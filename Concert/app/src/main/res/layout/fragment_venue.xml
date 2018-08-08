@@ -6,190 +6,187 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Title"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp"
-                        android:text="Name"
-                        android:textAlignment="textEnd"
-                        tools:text="Name" />
-
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="4dp"
-                        android:text="Venue"
-                        android:textAlignment="textEnd" />
-
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Address"
-                        android:textAlignment="textEnd" />
-
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Date"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/white"
-                        android:visibility="invisible" />
-
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Date"
-                        android:textAlignment="textEnd"
-                        android:textColor="@color/white"
-                        android:visibility="invisible" />
-
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
-                        android:text="Date"
-                        android:textAlignment="textEnd" />
-
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:background="#CCCCCC" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Name"
+                    android:textAlignment="textEnd"
+                    tools:text="Name" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:orientation="vertical">
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:text="Venue"
+                    android:textAlignment="textEnd" />
 
-                    <TextView
-                        android:id="@+id/venue_artist"
-                        style="@style/TextAppearance.AppCompat.Title"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp"
-                        android:textAlignment="textStart"
-                        tools:text="Justin Bieber" />
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Address"
+                    android:textAlignment="textEnd" />
 
-                    <TextView
-                        android:id="@+id/venue_name"
-                        style="@style/TextAppearance.AppCompat.Medium"
-                        android:layout_width="match_parent"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="4dp"
-                        android:textAlignment="textStart"
-                        tools:text="Freight Salvage" />
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Date"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:visibility="invisible" />
 
-                    <TextView
-                        android:id="@+id/venue_address"
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:ellipsize="end"
-                        android:maxLines="1"
-                        android:layout_height="match_parent"
-                        android:textAlignment="textStart"
-                        tools:text="2020 Addison Street" />
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Date"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/white"
+                    android:visibility="invisible" />
 
-                    <TextView
-                        android:id="@+id/venue_city_state"
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textAlignment="textStart"
-                        tools:text="Berkeley, California" />
-
-                    <TextView
-                        android:id="@+id/venue_country_zipcode"
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textAlignment="textStart"
-                        tools:text="US 94704" />
-
-                    <TextView
-                        android:id="@+id/venue_date"
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        tools:text="Aug 09, 2018" />
-
-                    <TextView
-                        android:id="@+id/venue_day"
-                        style="@style/TextAppearance.AppCompat.Small"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:text="09:00 PM" />
-                </LinearLayout>
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:text="Date"
+                    android:textAlignment="textEnd" />
 
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <View
+                android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="bottom">
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="#CCCCCC" />
 
-                <Button
-                    android:id="@+id/button_view_location"
-                    style="@style/TextAppearance.AppCompat.Small"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/button_view_location"
-                    android:textColor="@color/darkerWhite" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/button_get_ticket"
+                <TextView
+                    android:id="@+id/venue_artist"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="textStart"
+                    tools:text="Justin Bieber" />
+
+                <TextView
+                    android:id="@+id/venue_name"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="textStart"
+                    tools:text="Freight Salvage" />
+
+                <TextView
+                    android:id="@+id/venue_address"
                     style="@style/TextAppearance.AppCompat.Small"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="textStart"
+                    tools:text="2020 Addison Street" />
+
+                <TextView
+                    android:id="@+id/venue_city_state"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="textStart"
+                    tools:text="Berkeley, California" />
+
+                <TextView
+                    android:id="@+id/venue_country_zipcode"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="textStart"
+                    tools:text="US 94704" />
+
+                <TextView
+                    android:id="@+id/venue_date"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:background="@color/colorPrimaryLight"
-                    android:text="@string/button_get_ticket"
-                    android:textColor="@color/darkerWhite" />
+                    android:layout_marginTop="24dp"
+                    tools:text="Aug 09, 2018" />
+
+                <TextView
+                    android:id="@+id/venue_day"
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="09:00 PM" />
             </LinearLayout>
 
 
         </LinearLayout>
-    </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom">
+
+            <Button
+                android:id="@+id/button_view_location"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/button_view_location"
+                android:textColor="@color/darkerWhite" />
+
+            <Button
+                android:id="@+id/button_get_ticket"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryLight"
+                android:text="@string/button_get_ticket"
+                android:textColor="@color/darkerWhite" />
+        </LinearLayout>
+
+
+    </LinearLayout>
 </LinearLayout>

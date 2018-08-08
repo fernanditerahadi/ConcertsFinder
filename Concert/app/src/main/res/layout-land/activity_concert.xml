@@ -18,9 +18,9 @@
 
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:background="#263238"
-                android:minHeight="?android:attr/actionBarSize"
                 app:titleTextColor="#FFFFFF">
 
                 <fragment
@@ -36,19 +36,21 @@
                 android:id="@+id/concert_map"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="0dp"
+                android:layout_weight="6" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/concert_tab_layout"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:background="@color/colorPrimaryLight"
                 android:shadowColor="@color/lightGray"
                 android:shadowRadius="4"
@@ -58,8 +60,9 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/concert_view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginBottom="4dp"
+                android:layout_weight="6"
                 android:background="@color/white" />
         </LinearLayout>
 
